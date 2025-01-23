@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+    <title>Keynt Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* Import a nice font */
+        
+        body {
+            background-image: url('background.png');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            font-family: 'Roboto', sans-serif; /* Apply the font to the body */
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        .header {
+            color: white;
+            text-align: left;
+            padding: 100px;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(-50px) scale(0.9);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .header-large {
+            font-size: 300px;
+            bottom: 70%;
+        }
+        .header-medium {
+            font-size: 150px;
+        }
+        .explore {
+            bottom: 75%;
+            left: 60%;
+        }
+        .separator {
+            left: 82%;
+            top: 3%;
+        }
+        .about {
+            bottom: 74%;
+            left: 85%;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        .header a:hover {
+            color: rgb(23, 23, 19);
+            transition: 1.5s;
+            font-size: 160px;
+        }
+        .explore a:hover {
+            left: -3%;
+        }
+        .about a:hover {
+            left: -10%;
+        }
+        .mainheader {
+            left: 50%;
+            top: 46%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            white-space: nowrap; 
+        }
+
+        .earthheader {
+            left: 45%;
+            top: 135%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            white-space: nowrap; 
+            font-size: 500px;
+            
+            width: 70%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .jupiterheader {
+            left: 66%;
+            top: 198%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            white-space: nowrap; 
+            font-size: 500px;
+            width: 70%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .mainparagraph {
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            position: absolute;
+            color: white;
+            font-size: 75px;
+            width: 80%;
+            opacity: 0;
+            
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .secondparagraph {
+            left: 50%;
+            top: 300%;
+            transform: translate(50%, 50%);
+            text-align: center;
+            position: absolute;
+            color: white;
+            font-size: 75px;
+            width: 80%; 
+        }
+        .thirdparagraph {
+            position:absolute;
+            left: 30%;
+            top: 167%;
+            transform: translate(0.50%, 0.50%);
+            text-align: center;
+            position: absolute;
+            color: white;
+            font-size: 75px;
+            width: 80%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
+        }
+        .fourthparagraph {
+            position:absolute;
+            left: 2%;
+            top: 225%;
+            transform: translate(0.50%, 0.50%);
+            text-align: center;
+            position: absolute;
+            color: white;
+            font-size: 75px;
+            width: 80%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
+        }
+        .images img {
+            position: absolute;
+            top: 170%;  
+            left: 17%;  
+            transform: translateY(-50%) translateX(-50%);
+            height: 50%;
+            animation: rotate 10s linear infinite; 
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
+        }
+        .images2 img {
+            position: absolute;
+            top: 240%;  
+            left: 98%;  
+            transform: translateY(-50%) translateX(-50%);
+            height: 80%;
+            animation: rotate 10s linear infinite; 
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
+        }
+        @keyframes rotate {
+            from {
+                transform: translateY(-50%) translateX(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateY(-50%) translateX(-50%) rotate(360deg);
+            }
+        }
+        .planetheader {
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            white-space: nowrap; 
+            font-size:500px;
+            width: 70%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body.loaded .header, body.loaded .mainparagraph {
+            opacity: 1;
+            transform: translateY(5) scale(1);
+        }
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1 class="header header-large">Astronomy</h1>
+            <h2 class="header header-medium explore"><a href="explore.html">Explore the Universe</a></h2>
+            <h2 class="header header-medium separator">┃</h2>
+            <h3 class="header header-medium about"><a href="explore.html">About</a></h3>
+            
+            <h1 class="header header-large mainheader">Welcome to My Universe :)</h1>
+            <h1 class="header header-large planetheader">Planets </h1>
+            <h1 class="header header-large earthheader">EARTH</h1>
+            <h1 class="header header-large jupiterheader">JUPITER</h1>
+
+
+
+            <!-- FOR MY PARAGRAPHS -->
+            <p class="mainparagraph">This is the place where Kent meets the beautiful girl, Pau.</p>
+            <p class="secondparagraph">hello earth</p>
+            <p class="thirdparagraph">
+                Earth is the third planet from the Sun and the only known planet capable of sustaining life. It has a diverse structure, consisting of a solid crust, a molten mantle, and a dense core, with about 71% of its surface covered by water.Surrounded by an atmosphere rich in oxygen and nitrogen, it supports a wide variety of ecosystems and organisms. Earth orbits the Sun at an average distance of 93 million miles, completing a rotation every 24 hours and a revolution every 365.25 days.</p>
+             <p class="fourthparagraph">
+                Jupiter is the fifth planet from the Sun and the largest in our solar system, known for its massive size and striking appearance. It is a gas giant primarily composed of hydrogen and helium, with no solid surface and a turbulent atmosphere marked by colorful bands and the iconic Great Red Spot. Jupiter has a strong magnetic field and at least 95 moons, including the four largest, known as the Galilean moons: Io, Europa, Ganymede, and Callisto. Orbiting the Sun at an average distance of 484 million miles, it completes a rotation in just 10 hours but takes nearly 12 Earth years to complete one orbit.</p>
+            
+            
+            
+            
+            
+            
+            <!-- FOR MY IMAGES -->
+            <div class="images">
+                <img src="myearth.png"> 
+            
+            </div>  
+            <div class="images2">
+                <img src="jupiter.png"> 
+            
+            </div> 
+          
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        window.addEventListener('scroll', () => {
+            const thirdParagraph = document.querySelector('.thirdparagraph');
+            const fourthParagraph = document.querySelector('.fourthparagraph');
+            const earthImage = document.querySelector('.images img');
+            const jupiterImage = document.querySelector('.images2 img');
+            const rect = thirdParagraph.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                thirdParagraph.classList.add('visible');
+                earthImage.classList.add('visible');
+            }
+            const jupiterRect = jupiterImage.getBoundingClientRect();
+            if (jupiterRect.top < window.innerHeight && jupiterRect.bottom >= 0) {
+                jupiterImage.classList.add('visible');
+                fourthParagraph.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+</html>
